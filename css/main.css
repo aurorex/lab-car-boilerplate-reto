@@ -1,1 +1,539 @@
+section{
+        width: 100%;
+}
+.registro{
+    background-image: url(../assets/images/taxi.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;    
+    background-position: center center;
+    height: 100vh;
+}
+
+
+.row-registro,.nueva-app{
+	background-color: #ffc107;
+	color: white;
+}
+.fila-icon p, .icon-logoblanco, .fila-icon img{
+        display: inline-block;
+    }
+.conduce{
+	background-image: url(../assets/images/conduce.jpg);
+	background-size: 100vw 100vh;  
+    background-repeat: no-repeat;    
+    background-position: center center;
+    height: 100vh;
+    color: white;
+
+}
+.row-conduce button{
+    background-color: #ffc107 ;
+
+}
+.tarifa{
+	background-color:#ffc107;
+	color: white; 
+}
+.footer{
+    color: white;
+    background-color: #2b2b2b;
+}
+.footer ul li{
+    margin: 0 0 10px 0;
+}
+.footer ul li a{
+    color: white;   
+}
+
+/*estilos para mobile*/
+
+@media (max-width: 768px) {
+    /*estilos del nav*/
+    .nav .image{
+        padding: 30px 0 30px 20px;
+    } 
+    .nav button{
+        margin: 30px 0 0 0;
+    }
+    /* estilos para la seccion de registro*/ 
+    .registro{
+       background-image: url(../assets/images/taxi.jpg);
+       background-size: 97vw 100vh;  
+       background-repeat: no-repeat;    
+       background-position: center center;
+       height: 100vh;    
+    }       	
+	.registro{
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	.row-registro{
+     	height: 30vh;
+    	background-color: #ffc107;
+    	color: white;
+    	width: 80%;
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 20px;
+		align-items: center;
+		padding-left: 20px;	
+    }
+
+    .row-registro h2{
+    	margin: 0;
+    }
+    .img-registro{
+	    width: 50px;
+		
+    }
+
+    .fila-icon{
+		display: flex;
+		width: 100px;
+		flex-direction: row;	
+    }
+    
+    
+    .icon-logoblanco{	
+    	width: 50px;
+        margin-left: 7px;
+    }
+
+    /*clase para la seccion de descargar*/
+    .nueva-app{
+    	display: flex;
+    	flex-direction: column;
+    }
+    .row-1{
+    	border: 1px solid white;
+    	margin: 30px 0;
+    	padding: 40px;
+    	text-align: center;
+    }
+    .row-2{
+    	text-align: left;
+    	margin: 0 10px;
+    }
+    /*clase para seccion  "convertirte en un conductor"*/
+    .conduce{
+	    background-image: url(../assets/images/conduce.jpg);
+	    background-size: 100vw 60vh;  
+        background-repeat: no-repeat;    
+        background-position: center center;
+        height: 60vh;
+        color: #dee4ff;
+    }
+    .row-conduce{
+    	background-color: rgba(2, 0, 0, 0.6);
+    	height: 60vh;
+    	padding:  40px 20px;  
+    }
+    /*clase para la seccion "tarifas"*/
+    .tarifa{
+    	padding: 30px 30px;
+    }
+    .button-tarifa{
+    	text-align: center;
+    }
+    .input-tarifa{
+    	display:flex;
+    	align-items: left;
+    	flex-align:column;
+    }
+    .input-tarifa{
+        margin: 20px 0;
+    }
+    .input-tarifa img{
+        margin: 0 10px 0 0;
+    }
+    .input-tarifa input{
+    	background-color: #ffc107;
+    	border-color: white;    	
+    }
+    .input-tarifa input::placeholder{
+    	 color: white; 
+    }
+    .col-img{
+        padding: 10px ;
+        margin: 20px 0;
+        border: 1px solid white;
+    }
+    /*estilos para el footer*/
+    .footer{
+       font-size: 12px; 
+    }
+    .footer-logo{
+        margin: 20px 0 0 0;
+    }   
+}
+/*estilos para tablets*/
+@media (min-width:769px) and (max-width: 991px) {
+/*estilos del nav*/
+    .nav .image{
+        padding: 30px 0 30px 20px;
+    } 
+    .nav button{
+        margin: 30px 0 0 0;
+    }
+    /* estilos para la seccion de registro*/ 
+    .registro{
+       background-image: url(../assets/images/taxi.jpg);
+       background-size: 98vw 100vh;  
+       background-repeat: no-repeat;    
+       background-position: center center;
+       height: 100vh;    
+    }           
+    .registro{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .row-registro{
+        height: 30vh;
+        background-color: #ffc107;
+        color: white;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        align-items: center;
+        padding-left: 20px; 
+    }
+
+    .row-registro h2{
+        margin: 0;
+    }
+    .img-registro{
+        width: 50px;
+        
+    }
+
+    .fila-icon{
+        display: flex;
+        width: 100px;
+        flex-direction: row;    
+    }
+    .fila-icon p, .icon-logoblanco, .fila-icon img{
+        display: inline-block;
+    }
+    
+    .icon-logoblanco{   
+        width: 50px;
+        margin-left: 7px;
+    }
+
+    /*clase para la seccion de descargar*/
+    .nueva-app{
+        display: flex;
+        flex-direction: column;
+    }
+    .row-1{
+        border: 1px solid white;
+        margin: 30px 0;
+        padding: 40px;
+        text-align: center;
+    }
+    .row-2{
+        text-align: left;
+        margin: 0 10px;
+    }
+    /*clase para seccion  "convertirte en un conductor"*/
+    .conduce{
+        background-image: url(../assets/images/conduce.jpg);
+        background-size: 100vw 60vh;  
+        background-repeat: no-repeat;    
+        background-position: center center;
+        height: 60vh;
+        color: #dee4ff;
+    }
+    .row-conduce{
+        background-color: rgba(2, 0, 0, 0.6);
+        height: 60vh;
+        padding:  40px 20px;  
+    }
+    /*clase para la seccion "tarifas"*/
+    .tarifa{
+        padding: 30px 30px;
+    }
+    .button-tarifa{
+        text-align: center;
+    }
+    .input-tarifa{
+        display:flex;
+        align-items: left;
+        flex-align:column;
+    }
+    .input-tarifa{
+        margin: 20px 0;
+    }
+    .input-tarifa img{
+        margin: 0 10px 0 0;
+    }
+    .input-tarifa input{
+        background-color: #ffc107;
+        border-color: white;        
+    }
+    .input-tarifa input::placeholder{
+         color: white; 
+    }
+    .col-img{
+        padding: 10px ;
+        margin: 20px 0;
+        border: 1px solid white;
+    }
+    /*estilos para el footer*/
+    .footer{
+       font-size: 12px; 
+    }
+    .footer-logo{
+        margin: 20px 0 0 0;
+    }    
+
+}
+
+/*estilos para desktop*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    /*estilos para el nav*/
+    .nav .image{
+        padding: 20px 0 20px 40px;
+    }
+    .list-menu {
+        margin: 30px 20px 0 0;
+    }
+    /* estilos para la seccion de registro*/
+    .registro{
+        background-image: url(../assets/images/taxi.jpg);
+        background-size: 95vw 100vh;  
+        background-repeat: no-repeat;    
+        background-position: center center;
+        height: 100vh;    
+    }
+    .registro{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .row-registro{
+        height: 60vh;
+        background-color: #ffc107;
+        color: white;
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        align-items: center;
+        padding-left: 20px; 
+    }
+    .row-registro h2{
+        margin: 0;
+    }
+    .row-registro p{
+        display: inline-block;
+        font-size: 20px;
+    }
+    .fila-icon{
+        display: flex;
+        width: 100px;
+        flex-direction: row;    
+    }
+    /*clase para la seccion de descargar*/
+    .nueva-app{
+        display: flex;
+        flex-direction: row;
+    }
+    .row-1{
+        border: 1px solid white;
+        margin: 30px 0;
+        padding: 60px ;
+    }
+    /*clase para seccion  "convertirte en un conductor"*/
+    .conduce{
+        background-image: url(../assets/images/conduce.jpg);
+        background-size: 100vw 60vh;  
+        background-repeat: no-repeat;    
+        background-position: center center;
+        height: 60vh;
+        color: #dee4ff;
+    }
+    .row-conduce{
+        background-color: rgba(2, 0, 0, 0.6);
+        height: 60vh;
+        padding:  50px 20px;  
+    }
+    /*clase para la seccion "tarifas"*/
+    .tarifa{
+        padding: 30px;
+    }
+    .col-tarifa{
+        padding: 50px 0;
+    }
+    
+    .input-tarifa{
+        display:flex;
+        align-items: left;
+        flex-align:column;
+    }
+    .input-tarifa{
+        margin: 50px 0;
+    }
+    .input-tarifa img{
+        margin: 0 10px 0 0;
+    }
+    .input-tarifa input{
+        background-color: #ffc107;
+        border-color: white;        
+    }
+    .input-tarifa input::placeholder{
+         color: white; 
+    }
+    .col-img{
+        padding: 10px ;
+        margin: 20px 0;
+        border: 1px solid white;
+    }
+    /*estilos para el footer*/
+    .footer-logo{
+        margin: 20px 0 0 0;
+        font-size: 10px;
+    }
+    .col-icon{
+        margin-top: 210px;
+    }
+    .col-figure{
+        margin-top: 150px;   
+    }
+    .col-figure img{
+        margin-bottom: 10px;
+    }
+
+
+}
+
+@media (min-width:1200px){
+    /*estilos para el nav*/
+    .nav .image{
+        padding: 20px 0 20px 40px;
+    }
+    .list-menu {
+        margin: 30px 20px 0 0;
+    }
+    /* estilos para la seccion de registro*/
+    .registro{
+        background-image: url(../assets/images/taxi.jpg);
+        background-size: 97vw 100vh;  
+        background-repeat: no-repeat;    
+        background-position: center center;
+        height: 100vh;    
+    }
+    .registro{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .row-registro{
+        height: 60vh;
+        background-color: #ffc107;
+        color: white;
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        align-items: center;
+        padding-left: 20px; 
+    }
+    .row-registro h2{
+        margin: 0;
+    }
+    .row-registro p{
+        display: inline-block;
+        font-size: 20px;
+    }
+    .fila-icon{
+        display: flex;
+        width: 100px;
+        flex-direction: row;    
+    }
+    /*clase para la seccion de descargar*/
+    .nueva-app{
+        display: flex;
+        flex-direction: row;
+    }
+    .row-1{
+        border: 1px solid white;
+        margin: 30px 0;
+        padding: 60px ;
+    }
+    /*clase para seccion  "convertirte en un conductor"*/
+    .conduce{
+        background-image: url(../assets/images/conduce.jpg);
+        background-size: 100vw 60vh;  
+        background-repeat: no-repeat;    
+        background-position: center center;
+        height: 60vh;
+        color: #dee4ff;
+    }
+    .row-conduce{
+        background-color: rgba(2, 0, 0, 0.6);
+        height: 60vh;
+        padding:  50px 20px;  
+    }
+    /*clase para la seccion "tarifas"*/
+    .tarifa{
+        padding: 30px;
+    }
+    .col-tarifa{
+        padding: 50px 0;
+    }
+    
+    .input-tarifa{
+        display:flex;
+        align-items: left;
+        flex-align:column;
+    }
+    .input-tarifa{
+        margin: 50px 0;
+    }
+    .input-tarifa img{
+        margin: 0 10px 0 0;
+    }
+    .input-tarifa input{
+        background-color: #ffc107;
+        border-color: white;        
+    }
+    .input-tarifa input::placeholder{
+         color: white; 
+    }
+    .col-img{
+        padding: 10px ;
+        margin: 20px 0;
+        border: 1px solid white;
+    }
+    /*estilos para el footer*/
+    .footer-logo{
+        margin: 20px 0 0 0;
+        font-size: 10px;
+    }
+    .col-icon{
+        margin-top: 210px;
+    }
+    .col-figure{
+        margin-top: 150px;   
+    }
+    .col-figure img{
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+
 

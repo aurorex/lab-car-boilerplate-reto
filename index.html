@@ -6,24 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://file.myfontastic.com/xLNFR3UQF2rxkSBgDCxx2C/icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!--estructura para la seccion de navegacion-->
-    <nav class="navbar navbar-default">
-        <div class="container">
+    <nav >
+        <div class="container nav">
             <div class="row">
-                <div class="col1">
-                    <img src="assets/images/logoForma.png" alt="">
+                <div class=" image col-xs-6 ">
+                    <img  class="img-responsive" src="assets/images/logoForma.png" alt="">
                 </div>
-                <div class="col2">
-                    <!--<span class="icon-bars"></span>-->
-                    <ul>
-                       <li><a href="">Viaja</a> </li>
-                       <li><a href="">Conduce</a></li>
-                       <li><a href="">Inicia sesión</a> </li>
+                <div  class="col-xs-2 dropdown visible-xs">
+                    <button class="btn btn-default dropdown-toggle" id="menu1" type="button"data-toggle="dropdown" >
+                        <span class="icon-bars" ></span>
+                    </button>                    
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                       <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Viaja</a> 
+                       </li>
+                       <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Conduce</a>
+                       </li>
+                       <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#myModal">Inicia sesión</a> 
+                       </li>
                     </ul>
+                </div>
+
+                <div class=" list-menu hidden-xs  pull-right">
+                    <ul class="list-inline ">
+                       <li><a class="text-muted" href="">Viaja</a></li>
+                       <li><a class="text-muted" href="">Conduce</a></li>
+                       <li><a class="text-muted" href="#" data-toggle="modal" data-target="#myModal">Inicia sesión</a></li>
+                    </ul>
+                    <!--modal para el botton de iniciar sesion-->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                        <!--contenido del modal-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <img src="">
+                                    
+                                </div>
+                                <div class="modal-body">
+                                    <div class="col-sm-10">
+                                    <input  class="form-control" type="" name="" placeholder="Username">   
+                                    </div>
+                                    <div class="col-sm-10">
+                                    <input  class="form-control" type="" name="" placeholder="Password">   
+                                    </div>
+                                    <button class="btn btn-default btn-block">LOGING</button>
+                                    <P>Forgot password?<a href="">Click Here</a></P>
+
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
                 
@@ -32,78 +74,187 @@
     </nav>
     <!--estructura para la seccion de registro-->
     <section>
-        <div class="container">
-            <div class="row ">
-                <!--<img src="assets/images/taxi.jpg" alt="">-->
-                <div class="container">
-                    <div class="row">
+       
+            <div class="container registro col-xs-12">
+                <div class="row-registro ">
+                    <div class="hidden-xs col-sm-12 col-lg-12">
                         <h2>Disfruta del viaje</h2>
                         <h2>Eres dueño del tiempo</h2>
 
                     </div>
-                    <div class="row" style="background:red">
-                        <h3>Viaja con <span><img src="assets/images/logoBlanco.png" alt=""></span></h3>
-                        <button type="reset">REGÍSTRATE</button>
+                    <div class="comienza-viajar col-sm-12 col-lg-12">
+                        <h3 class="hidden-xs ">Viaja con <img  class="" src="assets/images/logoBlanco.png" alt="lab-car"></h3>
+                        <h3 class="visible-xs">Comienza a viajar</h2>
+                        <div class="visible-xs fila-icon"> 
+                          <p>con</p>
+                          <figure class="icon-logoblanco">
+                            <img  class="img-registro" src="assets/images/logoBlanco.png" alt="lab-car">
+                          </figure>
+                        </div>
+                        <button class="btn btn-default hidden-xs" data-toggle="modal" data-target="#myModalButton1" type="reset"><strong> REGÍSTRATE</strong>
+                        </button>
+                        <!--modal para el botton de registro /data-toggle="modal"-->
+
+                        <div id="myModalButton1" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                            <!--contenido del modal-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <button class="btn btn-default btn-block">Ya tienes una cuenta?</button>
+                                        <p>Crea una cuenta nueva</p>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal" action="/action_page.php">
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="email">correo electronico:</label>
+                                                <div class="col-sm-10">
+                                                  <input type="email" class="form-control" id="email" placeholder="email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="pwd">contraseña:</label>
+                                                <div class="col-sm-10"> 
+                                                  <input type="password" class="form-control" id="pwd" placeholder="password:">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="tlf">telefono:</label>
+                                                <div class="col-sm-10"> 
+                                                  <input type="password" class="form-control" id="tlf" placeholder="telefono:">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="ciudad">ciudad</label>
+                                                <div class="col-sm-10"> 
+                                                  <input type="password" class="form-control" id="ciudad" placeholder="ciudad">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-2" for="invitacion">invitacion:</label>
+                                                <div class="col-sm-10"> 
+                                                  <input type="password" class="form-control" id="invitacion" placeholder="(opcional) codigo de invitacion">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group"> 
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                  <button type="submit" class="btn btn-default">cómo te enteraste de nosotros?</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">ENVIAR</button>
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button  class="btn btn-default visible-xs bold" type="reset"><strong>Descarga el app</strong></button>
 
                     </div>
-                    <div class="row">
-                        <span>-</span>
+
+                    <div class="hidden-xs col-md-12 col-sm-12 col-lg-12 ">
+                        <span >________________</span>
                         <p>o bien</p>
-                        <span>-</span>
+                        <span >________________</span>
                     </div>
-                    <div class="row">
-                        <button>Conviértete en un conductor</button>
+
+                    <div class="hidden-xs col-sm-12 col-lg-12">
+                        <button class="btn btn-default" data-toggle="modal" data-target="#myModalButton2"><strong>Conviértete en un conductor</strong></button>
+                        <!--modal para el botton "conviertete en coonductor"-->
+
+                        <div id="myModalButton2" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                            <!--contenido del modal-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Inicio de sesion</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p></p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                     
                 </div>
+
             </div>
-        </div>
+        
     </section>
-    <!--estructura de la seccion de descarga-->
+    <!--estructura de la seccion de descargar-->
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col1">
-                    <img src="assets/images/iPhone6Plus.png" alt="">
+        <div class="container nueva-app">
+            <div class="row row-1 col-md-9">
+                <div class="col-1 col-md-5 ">
+                    <h4 class="visible-xs col-xs-offset-2">La nueva app</h4>
+                    <img class="img-responsive " src="assets/images/iPhone6Plus.png" alt="">
                 </div>
-                
-                <div class="col2">
-                    <h2>Descarga la nueva app</h2>
+                <div class="col-2 hidden-xs col-md-6">
+                    <h3>Descarga la nueva app</h3>
                     <p>La versión actualizada de LabCar está llena de nuevas funciones para llegar a donde quieras aún más fácil y rápido.</p>
                     <p>Con solo tocar un botón, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir.</p>
                 </div>
             </div>
+            <div class="row row-2 visible-xs">
+                <h5>Llega a tu destino aún más rápido</h5>
+            </div>
+            
+            
         </div>
     </section>
     <!--estructura de la seccion de "convertirte en conductor"-->
     <section>
-        <div class="container">
-            <div class="row">
-                <!--<img src="assets/images/conduce.jpg" alt="">-->
-                <div class="container">
-                    <div class="row">
-                        <h2>Conduce cuando quieras</h2>
-                        <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
-                        <button>Conviértete en un conductor</button>
-                    </div>
-                </div>
+        <div class="container conduce">
+            <div class="row row-conduce col-md-5 pull-right ">
+                <h3>Conduce cuando quieras</h3>
+                <h4>LabCar es una opción flexible para alcanzar tus metas financieras</h4>
+                <button class="btn">Conviértete en un conductor</button>
+                 
             </div>
         </div>
     </section>
     <!--estructura de la seccion de tarifas-->
     <section>
-        <div class="container">
+        <div class="container tarifa">
             <div class="row">
-
-                <div class="col1">
+                <div class="col-tarifa col-md-6 col-md-offset-1">
                     <h2>Tarifas</h2>
+                    <br>
                     <p>Consulta las tarifas LabCar aquí</p>
-                    <img style="background:red" src="assets/images/shape.png" alt=""><input type="text" placeholder="Ingrese su punto de partida">
-                    <img  style="background:red" src="assets/images/shape2.png" alt=""><input type="text" placeholder="Ingrese su destino">
-                    <button>¡TRAZAR RUTA!</button>
+                    <div class="input-tarifa">
+                        <img src="assets/images/shape.png" alt="">                             
+                        <input class="btn hidden-xs col-md-8" type="text" placeholder="Ingrese su punto de partida">
+                        <input class="btn visible-xs btn-block " type="text" placeholder="Lima, Barranco, Miraflores, San Iaidro, Jesús María, Villa María del Triunfo, La Victoria, Lince">
+
+                    </div>
+                    <div class="input-tarifa">
+                        <img src="assets/images/shape2.png" alt="">
+                        <input class="btn hidden-xs col-md-8" type="text" placeholder="Ingrese su destino">
+                        <input class="btn visible-xs btn-block " type="text" placeholder="La Molina, San Juan de Miraflores, Chorrillos, Surquillo, San Borja, Lince, Callao , El Agustino, Villa el Salvador ">
+
+                    </div>
+
+                    <div class="button-tarifa col-md-offset-3">
+                        <button class="btn btn-default"><strong>¡TRAZAR RUTA!</strong></button>   
+                    </div>
                 </div>
-                <div class="col2">
-                    <img src="assets/images/map.jpeg" alt="">
+                <div class="col-img col-md-5">
+                   <img  class="img-responsive visible-xs"  src="assets/images/map.jpg" alt="">
+                   <img  class="img-responsive hidden-xs"  src="assets/images/map2.jpg" alt="">
+
                 </div>
     
             </div>
@@ -111,22 +262,31 @@
     </section>
     <!--estructura del footer-->
     <footer>
-        <div class="container">
-            <div class="row">
-               <img src="assets/images/logoBlanco.png" alt="">
+        <div class="container footer">
+            <div class="row ">
+               <img class="col-md-2 footer-logo col-xs-4" src="assets/images/logoBlanco.png" alt="">
 
             </div>
             <hr>
             <div class="row">
-                <div class="col" style="background:red">
+                <div class=" col-icon col-xs-6 hidden-xs col-md-3">
+                    <span class="icon-facebook"></span>
+                    <span class="icon-twitter"></span>
+                    <span class="icon-linkedin"></span>
+                    <span class="icon-apple"></span>
+                    <span class="icon-play"></span>
+                    
+                </div>
+                <div class="col-xs-6 pull-right visible-xs">
                     <span class="icon-facebook"></span>
                     <span class="icon-twitter"></span>
                     <span class="icon-linkedin"></span>
                     <span class="icon-apple"></span>
                     <span class="icon-play"></span>
                 </div>
-                <div class="col">
-                    <ul>
+                
+                <div class="col-xs-6 col-md-3">
+                    <ul class="list-unstyled">
                         <li><a href="">Viaja</a></li>
                         <li><a href="">Conduce</a></li>
                         <li><a href="">Ciudades</a></li>
@@ -136,8 +296,8 @@
                         <li><a href="">Seguridad</a></li>
                     </ul>
                 </div>
-                <div class="col">
-                    <ul>
+                <div class="col hidden-xs col-md-3">
+                    <ul class="list-unstyled">
                         <li><a href="">Oportunidades</a></li>
                         <li><a href="">Nuestra historia</a></li>
                         <li><a href="">Api de LabCar</a></li>
@@ -148,21 +308,26 @@
                         <li><a href="">Coders</a></li>
                     </ul>
                 </div>
-                <div class="col">
-                    <img src="assets/images/appstore.png" alt="">
-                    <img src="assets/images/enbadgeWebGeneric.png" alt="">
+                <div class="col-figure col-xs-6 col-md-3">
+                    <img class="img-responsive col-md-8" src="assets/images/appstore.png" alt="">
+                    <img class="img-responsive col-md-8" src="assets/images/enbadgeWebGeneric.png" alt="">
                 </div>
                     
             </div>
             <hr>
             <div class="row">
-                <p>© 2017 LabCar technologies inc.</p>
+                <p class="col-xs-12">© 2017 LabCar technologies inc.</p>
                
             </div>
 
         </div>
     </footer>
-     <script type="text/javascript" src="js/app.js"></script>
-    <!-- en mi main para cambiar de color si no cimple poner !important-->
+
+    
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+
+    
 </body>
 </html>
